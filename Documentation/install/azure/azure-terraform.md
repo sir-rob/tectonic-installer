@@ -53,16 +53,16 @@ Get: file:///Users/tectonic-installer/modules/bootkube
 Get: file:///Users/tectonic-installer/modules/tectonic
 ```
 
-Generate credentials using the Azure CLI. If you're not logged in, execute `az login` first. See the [docs][login] for more info.
+Generate app credentials using the Azure CLI. If you're not logged in, execute `az login` first. See the [docs][login] for more info.
 
 ```
-$ az ad sp create-for-rbac -n "http://tectonic" --role contributor
+$ az ad sp create-for-rbac -n "tectonic" --role contributor
 Retrying role assignment creation: 1/24
 Retrying role assignment creation: 2/24
 {
  "appId": "generated-app-id",
- "displayName": "azure-cli-2017-01-01",
- "name": "http://tectonic-coreos",
+ "displayName": "tectonic",
+ "name": "http://tectonic",
  "password": "generated-pass",
  "tenant": "generated-tenant"
 }
